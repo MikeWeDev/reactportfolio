@@ -1,0 +1,125 @@
+.box {
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  padding: 20px 10px;
+}
+
+.box:hover {
+  cursor: pointer;
+}
+
+.box::before {
+  content: "";
+  position: absolute;
+  width: 60%;
+  height: 130%;
+  background: linear-gradient(#00ccff, #d500f9);
+  animation: rotate 4s linear infinite;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.box:hover::before {
+  background: linear-gradient(45deg, red, yellow);
+  animation: rotate 15s linear infinite;
+  cursor: pointer;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.box::after {
+  content: "";
+  background: #0e1538;
+  position: absolute;
+  inset: 5px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stage-cube-cont {
+  width: 90%;
+  height: 100%;
+  position: relative;
+}
+
+.cube-spiner {
+  animation-name: spincube;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-duration: 12s;
+  transform-style: preserve-3d;
+  transform-origin: 100px 100px 0;
+  margin-left: calc(50% - 100px);
+}
+
+.cube-spiner div {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border: 1px solid #ccc;
+  background: rgba(255, 255, 255, 0.4);
+  font-size: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  place-items: center;
+  box-shadow: 0 0 20px 0px lightyellow;
+}
+
+.face1 {
+  transform: translateZ(100px);
+  color: #dd0031;
+}
+.face2 {
+  transform: rotateY(90deg) translateZ(100px);
+  color: #f06529;
+}
+.face3 {
+  transform: rotateY(90deg) rotateX(90deg) translateZ(100px);
+  color: #28a4d9;
+}
+.face4 {
+  transform: rotateY(180deg) rotateZ(90deg) translateZ(100px);
+  color: #5ed4f4;
+}
+.face5 {
+  transform: rotateY(-90deg) rotateZ(90deg) translateZ(100px);
+  color: #efd81d;
+}
+.face6 {
+  transform: rotateX(-90deg) translateZ(100px);
+  color: #ec4d28;
+}
+
+@keyframes spincube {
+  from,
+  to {
+    transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  }
+  16% {
+    transform: rotateY(-90deg) rotateZ(90deg);
+  }
+  33% {
+    transform: rotateY(-90deg) rotateX(90deg);
+  }
+  50% {
+    transform: rotateY(-180deg) rotateZ(90deg);
+  }
+  66% {
+    transform: rotateY(-270deg) rotateX(90deg);
+  }
+  83% {
+    transform: rotateX(90deg);
+  }
+}
