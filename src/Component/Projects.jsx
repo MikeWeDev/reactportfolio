@@ -24,7 +24,7 @@ const projects = [
     category: 'fullstack',
     desc: 'A robust admin dashboard built with React, TypeScript, and Tailwind CSS to manage data, users, and analytics in real-time.',
     img: '/adminedashbord.webp',
-    liveUrl: 'adminedashbordfrontendforportfolio.netlify.app',
+    liveUrl: 'https://adminedashbordfrontendforportfolio.netlify.app/',
     tech: ['Next.js', 'TypeScript', 'Express', 'MongoDB']
   },
 
