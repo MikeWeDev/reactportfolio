@@ -25,7 +25,7 @@ function Hero() {
   }, [mouseX, mouseY]);
 
   return (
-    <section className="relative min-h-screen w-full bg-[#030712] flex items-center justify-center overflow-hidden mt-10"  id="hero">
+    <section className="relative min-h-screen w-full bg-[#030712] flex items-center justify-center overflow-hidden mt-26 md:mt-10"  id="hero">
       {/* Dynamic Background Layer */}
       <div className="absolute inset-0 z-0 ">
         <SimpleParticles />

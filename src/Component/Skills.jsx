@@ -62,7 +62,7 @@ const skillList = [
 
 function Skills() {
   return (
-    <div className="bg-[#121121] text-white min-h-screen flex items-center justify-center py-20 px-4">
+    <div className="bg-[#121121] text-white min-h-screen flex items-center justify-center py-20  pb-[300px] md:pb-20 px-4">
       <div
         id="skill"
         className="max-w-7xl w-full flex flex-col lg:flex-row items-center justify-between gap-16"

@@ -8,7 +8,7 @@ import { HiArrowLongRight } from "react-icons/hi2";
 const data = [
   {
     title: "Full-Stack Development",
-    icons: <RiNextjsFill className="text-black" />, 
+    icons: <RiNextjsFill className="text-white" />, 
     description: "Building production-ready web applications using Next.js, TypeScript, Express, and MongoDB. I focus on performance, scalability, and maintainable code.",
     borderColor: "group-hover:border-white/20", 
     shadowColor: "shadow-black/20"               

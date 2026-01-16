@@ -7,8 +7,8 @@ const projects = [
     title: 'Hotel Management System',
     category: 'fullstack',
     desc: 'A comprehensive hotel management platform built with React, TypeScript, Tailwind, and localStorage for front-end simulation of real-world booking, reservations, and admin functionalities.',
-    img: 'https://hms-front-end.netlify.app/',
-    liveUrl: '#',
+    img: '/195815886.jpg',
+    liveUrl: 'https://hms-front-end.netlify.app/',
     tech: ['Next.js', 'TypeScript', 'Express', 'MongoDB']
   },
   {
@@ -24,7 +24,7 @@ const projects = [
     category: 'fullstack',
     desc: 'A robust admin dashboard built with React, TypeScript, and Tailwind CSS to manage data, users, and analytics in real-time.',
     img: '/adminedashbord.webp',
-    liveUrl: '#',
+    liveUrl: 'adminedashbordfrontendforportfolio.netlify.app',
     tech: ['Next.js', 'TypeScript', 'Express', 'MongoDB']
   },
 
@@ -50,7 +50,7 @@ const projects = [
     category: 'frontend',
     desc: 'A clean, data-driven website focusing on visualization and user-friendly interfaces using React and Tailwind CSS.',
     img: '/CLEANDATA.png',
-    liveUrl: '',
+    liveUrl: 'https://cleand.netlify.app/',
     tech: ['React', 'Tailwind']
   },
   {
@@ -58,7 +58,7 @@ const projects = [
     category: 'frontend',
     desc: 'A promotional marketing website with responsive design, interactive elements, and optimized performance for brand engagement.',
     img: '/Gemini_Generated_Image_1czia71czia71czi.png',
-    liveUrl: '',
+    liveUrl: 'https://yaredmusic.netlify.app/',
     tech: ['React', 'Tailwind', 'Framer Motion']
   },
 
@@ -68,7 +68,7 @@ const projects = [
     category: 'telegram bot',
     desc: 'A real-time Telegram bot for a Bingo game platform, handling payments, game logic, and 10,000+ concurrent users using Telegraf, Express, and MongoDB.',
     img: '/luckey bingo promo.jpg',
-    liveUrl: '#',
+    liveUrl: 'https://t.me/bossbingobot',
     tech: ['Telegraf', 'Node.js', 'Express', 'MongoDB', 'Socket.io']
   }
 ];
