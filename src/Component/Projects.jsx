@@ -34,7 +34,7 @@ const projects = [
     category: 'frontend',
     desc: 'A modern e-commerce website with product catalog, shopping cart, and checkout flows built with React, Tailwind, and Redux for state management.',
     img: '/coloshop-free-bootstrap-ecommerce-website-templates.jpg',
-    liveUrl: 'https://mike-ecommerce-web.netlify.app/',
+    liveUrl: 'https://ecomarce-m.netlify.app/',
     tech: ['React', 'Tailwind']
   },
   {
@@ -42,7 +42,7 @@ const projects = [
     category: 'frontend',
     desc: 'A real estate showcase platform highlighting properties with responsive design, built using Next.js, Tailwind CSS, and Node.js backend integration.',
     img:'/realstate.jpg',
-    liveUrl: 'https://mike-realstate-app.netlify.app/',
+    liveUrl: 'https://realstate-rental.netlify.app/',
     tech: ['Reacts', 'Tailwind']
   },
   {
@@ -53,14 +53,14 @@ const projects = [
     liveUrl: 'https://cleand.netlify.app/',
     tech: ['React', 'Tailwind']
   },
-  {
+ /* {
     title: 'Marketing Website',
     category: 'frontend',
     desc: 'A promotional marketing website with responsive design, interactive elements, and optimized performance for brand engagement.',
     img: '/Gemini_Generated_Image_1czia71czia71czi.png',
     liveUrl: 'https://yaredmusic.netlify.app/',
     tech: ['React', 'Tailwind', 'Framer Motion']
-  },
+  },*/
 
   // ------------------ Telegram Bot Projects ------------------
   {
@@ -83,8 +83,8 @@ export default function Projects() {
     : projects.filter((p) => p.category === filter);
 
   return (
-    <section id="project" className="bg-[#0f172a] py-24">
-      <div className="container mx-auto px-6">
+    <section className="bg-[#0f172a] py-24">
+      <div className="container mx-auto px-6"  id="project">
         {/* Header Section */}
         <div className="text-center mb-16">
           <h2 className="text-yellow-400 uppercase text-sm tracking-[0.3em] font-bold mb-4">

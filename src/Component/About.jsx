@@ -11,9 +11,9 @@ const stats = [
 
 function About() {
   return (
-    <section id="about" className="bg-[#1a1c2e] py-20 lg:py-32 overflow-hidden">
+    <section  className="bg-[#1a1c2e] py-20 lg:py-32 overflow-hidden">
       <div className="container mx-auto px-6 lg:px-20">
-        <div className="flex flex-col lg:flex-row items-center gap-16">
+        <div className="flex flex-col lg:flex-row items-center gap-16" id="about">
           
           {/* LEFT: Image Side with Creative Frame */}
           <motion.div 
@@ -59,7 +59,7 @@ function About() {
 
             {/* Feature List */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-10">
-              {['Responsive Web Design', 'Telegram Bot Development', 'API Integration', 'Performance Optimization'].map((item) => (
+              {['Fullstack Development', 'Telegram Bot Development', 'API Integration', 'Performance Optimization'].map((item) => (
                 <div key={item} className="flex items-center gap-3 text-slate-200">
                   <FiCheckCircle className="text-[#55e6a5]" />
                   <span>{item}</span>

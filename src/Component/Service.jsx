@@ -3,7 +3,6 @@ import { motion } from 'framer-motion';
 import { FaTelegramPlane } from "react-icons/fa";
 import { RiNextjsFill } from "react-icons/ri";
 import { SiPostman } from "react-icons/si";
-import { HiArrowLongRight } from "react-icons/hi2";
 
 const data = [
   {
@@ -11,21 +10,24 @@ const data = [
     icons: <RiNextjsFill className="text-white" />, 
     description: "Building production-ready web applications using Next.js, TypeScript, Express, and MongoDB. I focus on performance, scalability, and maintainable code.",
     borderColor: "group-hover:border-white/20", 
-    shadowColor: "shadow-black/20"               
+    shadowColor: "shadow-black/20",
+    highlight: "Optimized for speed and scalability"
   },
   {
     title: "Telegram Bot Development",
     icons: <FaTelegramPlane className="text-[#229ED9]" />,
     description: "Designing and implementing Telegram bots with Telegraf for real-time interactions, automated workflows, and payment-enabled features.",
     borderColor: "group-hover:border-[#229ED9]/50",
-    shadowColor: "shadow-[#229ED9]/10"
+    shadowColor: "shadow-[#229ED9]/10",
+    highlight: "Real-time, automated, and reliable"
   },
   {
     title: "API Integration & Automation",
     icons: <SiPostman className="text-[#FF6C37]" />,
     description: "Integrating third-party APIs and internal services to build seamless, reliable systems. Focused on clean endpoints, authentication, and data consistency.",
     borderColor: "group-hover:border-[#FF6C37]/50",
-    shadowColor: "shadow-[#FF6C37]/10"
+    shadowColor: "shadow-[#FF6C37]/10",
+    highlight: "Seamless data flow and automation"
   }
 ];
 
@@ -86,11 +88,9 @@ export default function Services() {
                   </p>
                 </div>
 
-                <div className="mt-12">
-                  <button className="flex items-center gap-2 text-[#55e6a5] font-bold text-xs tracking-widest uppercase group/btn">
-                    Explore Details
-                    <HiArrowLongRight className="text-xl group-hover/btn:translate-x-2 transition-transform" />
-                  </button>
+                {/* Replace Explore Details button with a subtle highlight */}
+                <div className="mt-8 text-sm text-[#55e6a5]/80 font-semibold">
+                  {item.highlight}
                 </div>
 
                 {/* Ambient Decorative Number */}
