@@ -27,7 +27,7 @@ export const experiences = [
     color: "from-indigo-600 to-purple-500",
     icon: FaTelegramPlane,
     screenshots: ["/photo_1_2026-02-11_20-41-53.jpg", "/photo_2_2026-02-11_20-41-53.jpg", "/photo_3_2026-02-11_20-41-53.jpg"],
-    video: "/telegram bingo game review video.mp4",
+    video: "/telegram bingo game review video (1).mp4",
   },
   {
     id: 3,
