@@ -16,7 +16,7 @@ const skillList = [
 
 function Skills() {
   return (
-    <div className="bg-[#121121] text-white min-h-screen flex items-center justify-center py-10 px-4"  id="skill">
+    <div className="bg-[#121121] text-white min-h-screen flex items-center justify-center py-[300px] lg:py-10 px-4 "  id="skill">
       <div
         className="max-w-7xl w-full flex flex-col lg:flex-row items-center justify-between gap-16"
         data-aos="fade-up"
