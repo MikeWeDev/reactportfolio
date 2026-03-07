@@ -8,8 +8,6 @@ import { FaLinkedin, FaGithub, FaTelegramPlane, FaWhatsapp } from 'react-icons/f
 import SimpleParticles from './Particle';
 import ExampleComponent from './TextEffect';
 
-// 2. If the image is in your "public" folder, the path remains the same.
-// If it's in "src", you should import it: import heroImg from '../assets/home-right.png'
 
 function Hero() {
   const mouseX = useMotionValue(0);
