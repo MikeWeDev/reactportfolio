@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { experiences } from "./experiences";
 
@@ -13,11 +13,22 @@ import {
 export default function CaseStudy() {
   const { id } = useParams();
   const navigate = useNavigate();
+  const videoRef = useRef(null); 
   const exp = experiences.find((e) => e.id === parseInt(id));
+  
+  // State to manage full-screen image modal modal layer
+  const [selectedImg, setSelectedImg] = useState(null);
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, []);
+
+  // Sets the media player volume level to 50% on load
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.volume = 0.5;
+    }
+  }, [exp]);
 
   if (!exp) return null;
 
@@ -25,7 +36,7 @@ export default function CaseStudy() {
   const isSimpleView = !exp.video || exp.id === 3 || isEducation;
 
   return (
-    <section className="bg-[#080808] text-gray-100 min-h-screen p-4 md:p-8 font-sans">
+    <section className="bg-[#080808] text-gray-100 min-h-screen p-4 md:p-8 font-sans relative">
       <div className="max-w-[1600px] mx-auto space-y-6">
         
         {/* --- Top Action Bar --- */}
@@ -44,11 +55,11 @@ export default function CaseStudy() {
           </div>
         </div>
 
-        {/* --- Main Dashboard Grid --- */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 h-auto lg:h-[75vh]">
+        {/* --- Main Dashboard Grid (Changed to a reliable, explicit height context) --- */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 h-auto lg:h-[620px]">
           
           {/* Box 1: Identity */}
-          <div className="lg:col-span-4 flex flex-col justify-between p-8 rounded-3xl bg-gradient-to-br from-[#111] to-[#0a0a0a] border border-white/5 shadow-2xl">
+          <div className="lg:col-span-4 flex flex-col justify-between p-8 rounded-3xl bg-gradient-to-br from-[#111] to-[#0a0a0a] border border-white/5 shadow-2xl h-full">
             <div>
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-[10px] font-bold uppercase tracking-widest mb-6">
                 Project Case Study
@@ -81,12 +92,12 @@ export default function CaseStudy() {
             </div>
           </div>
 
-          {/* Box 2: Conditional Layout */}
-          <div className="lg:col-span-8 relative rounded-3xl border border-white/10 shadow-2xl overflow-hidden">
+          {/* Box 2: Conditional Layout (Strict block clipping containment) */}
+          <div className="lg:col-span-8 relative rounded-3xl border border-white/10 shadow-2xl overflow-hidden h-full">
             
             {/* --- Education Layout --- */}
             {isEducation ? (
-              <div className="h-full w-full bg-gradient-to-br from-[#0f1115] to-[#111827] p-10 flex items-center">
+              <div className="h-full w-full bg-gradient-to-br from-[#0f1115] to-[#111827] p-10 flex items-center overflow-y-auto">
                 <div className="max-w-3xl w-full space-y-10">
 
                   {/* Header */}
@@ -153,11 +164,10 @@ export default function CaseStudy() {
               </div>
 
             ) : isSimpleView ? (
-              <div className="h-full w-full bg-gradient-to-br from-[#0f0f0f] to-[#141414] p-10 flex items-center">
+              <div className="h-full w-full bg-gradient-to-br from-[#0f0f0f] to-[#141414] p-10 flex items-center overflow-y-auto">
                 <div className="max-w-3xl w-full space-y-10">
 
                   <div>
-                   
                     <h2 className="mt-6 text-4xl font-bold tracking-tight">
                       Private Client Project
                     </h2>
@@ -211,7 +221,7 @@ export default function CaseStudy() {
               </div>
 
             ) : (
-              <div className="relative group h-full bg-black">
+              <div className="relative group h-full w-full bg-black overflow-hidden">
                 <div className="absolute top-5 left-5 z-10 flex items-center gap-2">
                   <div className="w-2 h-2 rounded-full bg-red-500 animate-pulse" />
                   <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-white/50">
@@ -219,12 +229,13 @@ export default function CaseStudy() {
                   </span>
                 </div>
 
-                <iframe
+                <video
+                  ref={videoRef}
                   src={exp.video}
-                  frameBorder="0"
-                  allowFullScreen
-                  className="w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-opacity"
-                  title="Project Video"
+                  controls
+                  autoPlay
+                  loop
+                  className="w-full h-full object-contain opacity-90 group-hover:opacity-100 transition-opacity block"
                 />
               </div>
             )}
@@ -232,9 +243,9 @@ export default function CaseStudy() {
           </div>
         </div>
 
-        {/* --- Divider + Screenshots (hide if simple/education view) --- */}
+        {/* --- Divider + Screenshots (Pushed outside the explicit height engine layout stream completely) --- */}
         {!isSimpleView && !isEducation && (
-          <>
+          <div className="w-full pt-4">
             <div className="flex items-center gap-4 py-8">
               <div className="h-[1px] flex-1 bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
               <HiOutlineViewGrid className="text-gray-600" />
@@ -244,24 +255,47 @@ export default function CaseStudy() {
               <div className="h-[1px] flex-1 bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pb-12">
               {exp.screenshots?.map((img, idx) => (
                 <div
                   key={idx}
-                  className="aspect-video rounded-2xl overflow-hidden border border-white/5 bg-[#111] group"
+                  onClick={() => setSelectedImg(img)}
+                  className="aspect-video rounded-2xl overflow-hidden border border-white/5 bg-[#111] group shadow-2xl cursor-pointer"
                 >
                   <img
                     src={img}
-                    alt="Detail"
+                    alt="Detail Subsystem Render"
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                   />
                 </div>
               ))}
             </div>
-          </>
+          </div>
         )}
 
       </div>
+
+      {/* --- Fullscreen Image Lightbox Modal Overlay --- */}
+      {selectedImg && (
+        <div 
+          className="fixed inset-0 bg-black/90 backdrop-blur-md z-50 flex items-center justify-center p-4 cursor-zoom-out animate-fadeIn"
+          onClick={() => setSelectedImg(null)}
+        >
+          <button 
+            onClick={() => setSelectedImg(null)}
+            className="absolute top-6 right-6 text-xs text-gray-400 hover:text-white uppercase tracking-widest font-bold bg-white/5 px-4 py-2 rounded-full border border-white/10 transition-colors"
+          >
+            Close Esc
+          </button>
+          
+          <img 
+            src={selectedImg} 
+            alt="Expanded visual render" 
+            className="max-w-full max-h-[90vh] rounded-xl object-contain select-none shadow-2xl"
+            onClick={(e) => e.stopPropagation()} // Prevents closing when clicking directly on image box
+          />
+        </div>
+      )}
     </section>
   );
 }

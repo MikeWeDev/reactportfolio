@@ -8,7 +8,7 @@ const ExperienceCard = ({ exp }) => {
   const Icon = exp.icon;
 
   return (
-    <div className="relative group w-full mb-12" data-aos="fade-up" id="expriance">
+    <div className="relative group w-full mb-12" data-aos="fade-up" >
       <div className={`relative overflow-hidden rounded-[2.5rem] bg-[#0f0f12] border border-white/5 p-8 md:p-12 transition-all duration-700 hover:border-blue-500/30`}>
         <div className={`absolute -inset-px bg-gradient-to-br ${exp.color} opacity-0 group-hover:opacity-10 transition-opacity duration-700`} />
         <div className="relative z-10 flex flex-col h-full">
@@ -62,7 +62,7 @@ const ExperienceCard = ({ exp }) => {
 
 export default function Experience() {
   return (
-    <section className="bg-[#050505] min-h-screen py-24 px-6">
+    <section className="bg-[#050505] min-h-screen py-24 px-6" id="expriance">
       <div className="max-w-7xl mx-auto">
         <header className="mb-20 text-center">
           <h1 className="text-5xl md:text-7xl font-black tracking-tighter text-white">Experience</h1>
