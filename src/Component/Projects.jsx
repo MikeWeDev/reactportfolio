@@ -16,7 +16,7 @@ const projects = [
     category: 'fullstack',
     desc: 'A full-stack travel planner using Next.js, Express, MongoDB, and OpenAI API that generates dynamic itineraries based on user preferences and travel data.',
     img: '/build-ai-trip-planner-app.png',
-    liveUrl: 'https://ai-internary-travel-planner.netlify.app/',
+    liveUrl: 'https://aitravelplanner-final.netlify.app/',
     tech: ['Next.js', 'Express', 'MongoDB', 'Cohere API']
   },
   {
