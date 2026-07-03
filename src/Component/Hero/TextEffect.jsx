@@ -9,7 +9,7 @@ const  ExampleComponent = () => {
        1500, // wait 1s before replacing "Mice" with "Hamsters"
         'TELEGRAM BOT DEVELOPER',
        1500,
-       'PAYMENT INTEGRATION',
+       'AI & API INTEGRATION',
        1500,
       ]}
       speed={60}

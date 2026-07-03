@@ -7,7 +7,7 @@ const ExperienceCard = ({ exp }) => {
   const Icon = exp.icon;
 
   return (
-    <div className="relative group w-full mb-16" data-aos="fade-up">
+    <div className="relative group w-full mb-16" data-aos="fade-up" >
       {/* Ambient background glow tracking the card hover */}
       <div className={`absolute -inset-2 bg-gradient-to-r ${exp.color} opacity-0 group-hover:opacity-10 blur-2xl transition-opacity duration-700 rounded-[3rem]`} />
       
@@ -113,18 +113,15 @@ const ExperienceCard = ({ exp }) => {
 
 export default function Experience() {
   return (
-    <section className="bg-[#050505] min-h-screen py-24 px-6" id="experience">
+    <section className="bg-[#050505] min-h-screen py-24 px-6" id="expriance">
       <div className="max-w-7xl mx-auto">
         <header className="mb-20 text-center space-y-4">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-xs font-mono text-blue-400 uppercase tracking-widest">
             Portfolio Highlights
           </div>
           <h1 className="text-5xl md:text-7xl font-black tracking-tighter text-white">
-            Selected Work
+            My Experience
           </h1>
-          <p className="text-gray-400 max-w-2xl mx-auto text-base md:text-lg leading-relaxed">
-            A deep dive into built logic, system architectures, and live demonstrations. Click any card to watch the video demo.
-          </p>
         </header>
 
         <div className="space-y-4">
