@@ -19,6 +19,15 @@ const projects = [
     liveUrl: 'https://aitravelplanner-final.netlify.app/',
     tech: ['Next.js', 'Express', 'MongoDB', 'Cohere API']
   },
+    {
+    title: 'Event Sharing Platform',
+    category: 'fullstack',
+    desc: 'A platform for sharing and discovering events, built with Next.js, TypeScript, and Tailwind CSS.',
+    img: '/images/images.jpeg',
+    liveUrl: 'http://event-ly.page/',
+    tech: ['Next.js', 'TypeScript', 'Express', 'MongoDB']
+  },
+
   {
     title: 'Admin Dashboard',
     category: 'fullstack',
