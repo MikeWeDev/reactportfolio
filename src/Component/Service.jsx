@@ -20,14 +20,13 @@ const data = [
     borderColor: "group-hover:border-[#229ED9]/50",
     shadowColor: "shadow-[#229ED9]/10",
     highlight: "Real-time, automated, and reliable"
-  },
-  {
-    title: "API Integration & Automation",
-    icons: <SiPostman className="text-[#FF6C37]" />,
-    description: "Integrating third-party APIs and internal services to build seamless, reliable systems. Focused on clean endpoints, authentication, and data consistency.",
-    borderColor: "group-hover:border-[#FF6C37]/50",
-    shadowColor: "shadow-[#FF6C37]/10",
-    highlight: "Seamless data flow and automation"
+  },{
+    title: "AI & API Integration & Automation",
+icons: <SiPostman className="text-[#FF6C37]" />,
+description: "Integrating third-party APIs, AI services, and internal systems to build seamless, reliable solutions. Focused on clean endpoints, authentication, intelligent automation, and efficient data flow.",
+borderColor: "group-hover:border-[#FF6C37]/50",
+shadowColor: "shadow-[#FF6C37]/10",
+highlight: "Seamless data flow, AI-powered features, and automation"
   }
 ];
 
