@@ -1,6 +1,6 @@
 import React, { useRef, useState, useEffect } from 'react';
 import emailjs from '@emailjs/browser';
-import { FaTelegramPlane, FaLinkedinIn, FaWhatsapp, FaEnvelope } from 'react-icons/fa';
+import { FaTelegramPlane, FaLinkedinIn, FaWhatsapp, FaEnvelope, FaPhone } from 'react-icons/fa';
 import { FiSend, FiCheckCircle, FiAlertCircle } from 'react-icons/fi';
 
 export default function Contact() {
@@ -61,11 +61,47 @@ export default function Contact() {
                 <a href="mailto:mikyasnegash2@gmail.com" className="flex items-center gap-4 text-gray-300 hover:text-indigo-400 transition-colors">
                   <FaEnvelope className="text-indigo-500" /> mikyasnegash2@gmail.com
                 </a>
-                <div className="flex justify-center lg:justify-start gap-4 pt-4">
-                  <a href="https://t.me/Mikyyetklyelij" target="_blank" rel="noreferrer" className="bg-[#0088CC] p-4 rounded-xl text-white hover:scale-110 transition-transform"><FaTelegramPlane /></a>
-                  <a href=" https://www.linkedin.com/in/mikiyas-negash-01b400263" className="bg-[#0A66C2] p-4 rounded-xl text-white hover:scale-110 transition-transform"><FaLinkedinIn /></a>
-                  <a href="https://wa.me/251902464535" className="bg-[#25D366] p-4 rounded-xl text-white hover:scale-110 transition-transform"><FaWhatsapp /></a>
-                </div>
+               <div className="flex justify-center lg:justify-start gap-4 pt-4">
+
+  {/* Telegram */}
+  <a 
+    href="https://t.me/Mikyyetklyelij" 
+    target="_blank" 
+    rel="noreferrer"
+    className="bg-[#0088CC] p-4 rounded-xl text-white hover:scale-110 transition-transform"
+  >
+    <FaTelegramPlane />
+  </a>
+
+  {/* LinkedIn */}
+  <a 
+    href="https://www.linkedin.com/in/mikiyas-negash-01b400263"
+    target="_blank"
+    rel="noreferrer"
+    className="bg-[#0A66C2] p-4 rounded-xl text-white hover:scale-110 transition-transform"
+  >
+    <FaLinkedinIn />
+  </a>
+
+  {/* WhatsApp */}
+  <a 
+    href="https://wa.me/251902464535"
+    target="_blank"
+    rel="noreferrer"
+    className="bg-[#25D366] p-4 rounded-xl text-white hover:scale-110 transition-transform"
+  >
+    <FaWhatsapp />
+  </a>
+
+  {/* Direct Call */}
+  <a
+    href="tel:+251902464535"
+    className="bg-green-600 p-4 rounded-xl text-white hover:scale-110 transition-transform scale-x-[-1]"
+  >
+    <FaPhone />
+  </a>
+
+</div>
               </div>
             </div>
           </div>
