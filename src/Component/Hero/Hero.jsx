@@ -89,10 +89,10 @@ function Hero() {
           {/* Socials */}
           <div className="flex gap-6 items-center">
             {[
-              { icon: <FaLinkedin />, link: 'https://linkedin...', color: 'hover:text-[#0A66C2]' },
-              { icon: <FaGithub />, link: 'https://github...', color: 'hover:text-white' },
-              { icon: <FaTelegramPlane />, link: 'https://t.me...', color: 'hover:text-[#0088CC]' },
-              { icon: <FaWhatsapp />, link: 'https://wa.me...', color: 'hover:text-[#25D366]' },
+              { icon: <FaLinkedin />, link: ' https://www.linkedin.com/in/mikiyas-negash-01b400263', color: 'hover:text-[#0A66C2]' },
+              { icon: <FaGithub />, link: 'https://github.com/MikeWeDev', color: 'hover:text-white' },
+              { icon: <FaTelegramPlane />, link: 'https://t.me/Mikyyetklyelij', color: 'hover:text-[#0088CC]' },
+              { icon: <FaWhatsapp />, link: 'https://wa.me/251902464535', color: 'hover:text-[#25D366]' },
             ].map((social, i) => (
               <a 
                 key={i} 

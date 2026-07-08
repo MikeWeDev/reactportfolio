@@ -63,8 +63,8 @@ export default function Contact() {
                 </a>
                 <div className="flex justify-center lg:justify-start gap-4 pt-4">
                   <a href="https://t.me/Mikyyetklyelij" target="_blank" rel="noreferrer" className="bg-[#0088CC] p-4 rounded-xl text-white hover:scale-110 transition-transform"><FaTelegramPlane /></a>
-                  <a href="#" className="bg-[#0A66C2] p-4 rounded-xl text-white hover:scale-110 transition-transform"><FaLinkedinIn /></a>
-                  <a href="#" className="bg-[#25D366] p-4 rounded-xl text-white hover:scale-110 transition-transform"><FaWhatsapp /></a>
+                  <a href=" https://www.linkedin.com/in/mikiyas-negash-01b400263" className="bg-[#0A66C2] p-4 rounded-xl text-white hover:scale-110 transition-transform"><FaLinkedinIn /></a>
+                  <a href="https://wa.me/251902464535" className="bg-[#25D366] p-4 rounded-xl text-white hover:scale-110 transition-transform"><FaWhatsapp /></a>
                 </div>
               </div>
             </div>
