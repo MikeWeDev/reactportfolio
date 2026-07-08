@@ -79,7 +79,7 @@ function About() {
 
             {/* CTA Button */}
             <motion.a 
-              href="/updated-cv.pdf" 
+              href="/cv_8_1783084855432.pdf"
               download
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}

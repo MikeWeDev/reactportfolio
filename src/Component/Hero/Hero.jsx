@@ -73,7 +73,7 @@ function Hero() {
             <motion.a
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              href="/updated-cv.pdf"
+              href="/cv_8_1783084855432.pdf"
               download
               className="flex items-center gap-2 px-8 py-4 bg-white text-black font-bold rounded-full transition-all hover:bg-indigo-400 hover:text-white"
             >
@@ -120,7 +120,7 @@ function Hero() {
             <div className="relative w-full h-full overflow-hidden rounded-[2rem] border border-white/10 z-10">
               {/* Changed from <Image /> to <img> */}
               <img
-                src="/home-right.png"
+                src="/d0733e38-e9fc-4cb2-8e6c-17604e245199.png"
                 alt="Mikiyas"
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
               />
