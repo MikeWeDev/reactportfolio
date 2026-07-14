@@ -79,7 +79,7 @@ function About() {
 
             {/* CTA Button */}
             <motion.a 
-              href="/cv_8_1783084855432.pdf"
+              href="/Mikiyas_Negash_CV_v2.pdf"
               download
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}

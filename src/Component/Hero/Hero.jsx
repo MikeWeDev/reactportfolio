@@ -73,7 +73,7 @@ function Hero() {
             <motion.a
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              href="/cv_8_1783084855432.pdf"
+              href="/Mikiyas_Negash_CV_v2.pdf"
               download
               className="flex items-center gap-2 px-8 py-4 bg-white text-black font-bold rounded-full transition-all hover:bg-indigo-400 hover:text-white"
             >
