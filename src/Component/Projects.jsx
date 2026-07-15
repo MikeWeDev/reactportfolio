@@ -24,7 +24,7 @@ const projects = [
     category: 'fullstack',
     desc: 'A platform for sharing and discovering events, built with Next.js, TypeScript, and Tailwind CSS.',
     img: '/images/images.jpeg',
-    liveUrl: 'http://event-ly.page/',
+    liveUrl: 'https://eventsharingnew.netlify.app/',
     tech: ['Next.js', 'TypeScript', 'Express', 'MongoDB']
   },
 
